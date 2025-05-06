@@ -24,6 +24,26 @@
 
 ### Key pair will automatically download to your local computer.
 
-* Fill out the netw
+* Create a Secuirity groupm be sure to check _Allow ssh traffic_ and from any IP address
 
 ![fill](./img/fill-out-network-4.png)
+
+* Next, Increase the storage size to 15gb, specify the number of instances you want to create
+
+![fill](./img/fillout-storage--5.png)
+
+* Click _Launch instance_ to create the Ec2 VM on AWS
+
+![launch](./img/launch-6.png)
+
+* You should see the VM building.
+![launching](./img/instance-launching.png)
+
+* Once ready, go to your dashboard to see the VMs running on your account.
+
+![vms](./img/running.png)
+
+## Connecting to the instance(ssh)
+* Find the public IP address of the running instance
+
+![ip](./img/ip-address.png)
