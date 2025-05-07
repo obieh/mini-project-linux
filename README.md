@@ -47,3 +47,49 @@
 * Find the public IP address of the running instance
 
 ![ip](./img/ip-address.png)
+
+### To connect to the VM click on _connect_ while the the name checkbox is checked.
+
+![connect](./img/click-connect.png)
+
+### Another window pops. Click **ssh client** tab to see how to connect to the instance, Copy the example given.
+
+![ssh](./img/ssh-client.png)
+
+### Head over to your terminal and change directory to the location of the .pem file downloaded earlier. In this case Downloads.
+
+* `cd Downloads`
+
+### Now paste the example command you copied from the ssh client tab and hit enter.
+
+* `ssh -i "linux-mini-project.pem" ubuntu@ec2-3-129-73-101.us-east-2.compute.amazonaws.com`
+![bad](./img/bad-permission.png)
+
+### Connection was denied due to permissions issues on the .pem file as shown above.
+
+*  Run `chmod 400 linux-mini-project.pem`
+
+![chmod](./img/chmod.png)
+
+### Try connecting to the instance again
+
+![con](./img/connected1.png)
+
+![con2](./img/connect2.png)
+
+### Connection was successful as shown above.
+
+## Package managers
+
+### since our linux distrobution is Ubuntu A debian based. Adavnced Package Tool(apt) is the appropriate package manager
+
+### Updating and installing softwares on the EC2 instance.
+
+* Run `sudo apt update`
+
+![update](./img/sudo-apt-update.png)
+
+* Run `sudo apt install tree` to install tree on the VM.
+
+![tree](./img/install%20tree.png)
+
