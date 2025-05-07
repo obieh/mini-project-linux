@@ -93,3 +93,51 @@
 
 ![tree](./img/install%20tree.png)
 
+### verify th installed package
+
+![tree](./img/test-tree.png)
+
+* Run `mkdir project` to create a folder namde project.
+
+![folder](./img/mkdir.png)
+
+### Install nginx
+
+* Run `sudo apt install nginx` to install nginx webserver on the VM.
+
+![nginx](./img/install-nginx.png)
+
+#### Nginx might require you to start nginx
+
+* Run `sudo systemctl start nginx` to start nginex service.
+
+### Check if the nginx service is up and running
+
+* Run `sudo systemctl status nginx` to check nginx status
+
+![service](./img/nginx-status.png)
+
+### Nginx service is running. Now copy your instance public ip address and head to your browser to confirm nginx service is available.
+
+![bad](./img/web-ngnx-no-show.png)
+
+### We could not access the service, we head aws account and check secuirity settings of the instance. 
+### We had only allowed ssh connection to the machine.
+![](./img/inbound-rule1.png)
+
+### The inbound rule will have to edited to allow other traffic to rech the machine. Click _edith inbound rules_ in the secuiity group
+![](./img/edit-inbound-1.png)
+
+### Click add rules and allow all trafic from all sources then save. Please note that allowing all traffics is not advised on production enviroment. Allowing all traffice is only for the purposse of this project or for development enviroment only.
+
+![](./img/save-inbound-rule.png)
+
+### Verify the inbound rules you just edited have been saved
+
+![](./img/afta-edit-save-inbound.png)
+
+### Head back to your browser and refresh
+
+![](./img/welcome-nginx.png)
+
+### We can now see the nginx welcome page to prove that nginx service is publicly available.
