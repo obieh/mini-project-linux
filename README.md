@@ -141,3 +141,5 @@
 ![](./img/welcome-nginx.png)
 
 ### We can now see the nginx welcome page to prove that nginx service is publicly available.
+
+##nHope you followed through and this have been informative for you.
